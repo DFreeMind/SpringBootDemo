@@ -9,9 +9,18 @@
         <module name="SpringBootDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HelloWorldApp" target="1.8" />
+      <module name="HelloWorldApp-ear" target="1.5" />
+      <module name="HelloWorldApp-rws" target="1.5" />
+      <module name="HelloWorldApp-service" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HelloWorldApp" options="-parameters" />
+      <module name="HelloWorldApp-rws" options="-parameters" />
+      <module name="HelloWorldApp-service" options="-parameters" />
       <module name="SpringBootDemo" options="-parameters" />
     </option>
   </component>
