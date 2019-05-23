@@ -17,12 +17,12 @@ public class EmployeeController {
     @Autowired
     private EmployeeDAO employeeDao;
 
-    @GetMapping(path = "/", produces = "application/json")
+    @GetMapping(path = "/")
     public Employees getEmployees(){
         return employeeDao.getAllEmloyees();
     }
 
-    @PostMapping(path = "/", consumes = "application/json", produces = "application/json")
+    @PostMapping(path = "/")
     public ResponseEntity<Object> addEmployee(@RequestBody Employee employee){
         Integer id = employeeDao.getAllEmloyees().getEmployeeList().size() + 1;
         employee.setId(id);
